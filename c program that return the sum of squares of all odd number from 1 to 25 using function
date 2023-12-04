@@ -1,0 +1,17 @@
+#include <stdio.h>
+int fan()
+{
+    int n,s=0;
+    for(n=1;n<=25;n++)
+    {
+        if (n%2!=0)
+        s+=n*n;
+    }
+    return s;
+}
+int main()
+{
+    printf("%d\n",fan());
+
+    return 0;
+}
