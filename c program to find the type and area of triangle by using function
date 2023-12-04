@@ -1,0 +1,33 @@
+
+#include <stdio.h>
+#include <math.h>
+float area(float l,float m,float n)
+{
+    float a,d;
+    d=l+m+n;
+   float s=d/2;
+   printf("%f",s);
+    
+    a=sqrt(s*(s-l)*(s-m)*(s-n));
+    printf("area of triangle is:%f",a);
+}
+float fan(float i,float j,float k)
+{
+    if(i*i==j*j+k*k||j*j==k*k+i*i||k*k==i*i+j*j)
+    printf("it is a right angled triangle\n");
+    else if(i==j&&j==k)
+    printf("it is equilateral triangle\n");
+    else if(i==j||j==k||i==k)
+    printf("it is isosceles triangle\n");
+    else
+    printf("it is scalen triangle\n");
+}
+int main()
+{float a,b,c;
+    printf("enter the sides of triangle:");
+    scanf("%f %f %f",&a,&b,&c);
+    fan(a,b,c);
+    area(a,b,c);
+
+    return 0;
+}
